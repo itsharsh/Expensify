@@ -3,7 +3,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path");
 
 module.exports = (env) => {
-  const CSSExtract = ExtractTextPlugin("styles.css");
+  const CSSExtract = new ExtractTextPlugin("styles.css");
   return {
     entry: "./src/App.js",
     output: {
